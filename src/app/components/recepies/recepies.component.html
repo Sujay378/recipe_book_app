@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <app-recepie-list></app-recepie-list>
+        </div>
+
+        <div class="col-md-8">
+            <app-recepie-detail
+            *ngIf="currentRecepie; else infoBlock"
+            [recepie]="currentRecepie"></app-recepie-detail>
+            <ng-template #infoBlock>
+                <p class="d-flex justify-content-center" style="margin: 200px; color: #B3B3B3;">Please slect a recepie to see details</p>
+            </ng-template>
+        </div>
+    </div>
+</div>

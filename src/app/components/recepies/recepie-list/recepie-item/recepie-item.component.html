@@ -1,0 +1,18 @@
+<a style="cursor: pointer;" (click)="sendDetails()">
+  <div class="card mb-3">
+      <div class="row g-0 d-flex flex-row-reverse">
+        <div class="col-md-4">
+          <img [src]="recepie.imageUrl" class="img-fluid rounded-end" alt="Recepie image"/>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">
+              {{ recepie.name }}
+            </h5>
+            <p class="card-text">{{ recepie.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>  
+</a>
+  
