@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RecepieService } from 'src/app/services/recepie.service';
-import { Recepie } from './recepie.model';
+import { Recepie } from '../../models/recepie.model';
 
 @Component({
   selector: 'app-recepies',

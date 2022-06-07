@@ -1,6 +1,4 @@
 <app-header (toggle)="currentView = $event"></app-header>
 <div class="container my-3">
-  <app-recepies *ngIf="currentView === 'Recepie'"></app-recepies>
-  <app-shopping-list *ngIf="currentView === 'Shopping'"></app-shopping-list>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { RecepieService } from 'src/app/services/recepie.service';
-import { Recepie } from '../../recepie.model';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Recepie } from '../../../../models/recepie.model';
 
 @Component({
   selector: 'app-recepie-item',
@@ -9,14 +9,11 @@ import { Recepie } from '../../recepie.model';
 })
 export class RecepieItemComponent implements OnInit {
   @Input() recepie: Recepie;
+  @Input() index: number;
 
-  constructor(private recepieService: RecepieService) { }
+  constructor(private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
-
-  sendDetails() {
-    this.recepieService.selectedRecepie.emit(this.recepie);
-  }
-
 }

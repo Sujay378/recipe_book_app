@@ -1,6 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { Recepie } from '../components/recepies/recepie.model';
-import { Ingredient } from '../shared/ingredient.model';
+import { Recepie } from '../models/recepie.model';
+import { Ingredient } from '../models/ingredient.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,5 +15,9 @@ export class RecepieService {
 
   getRecepies() {
     return this.recepies.slice();
+  }
+
+  getRecipe(id : number) {
+    return this.recepies[id];
   }
 }
